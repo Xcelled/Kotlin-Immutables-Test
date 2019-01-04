@@ -5,10 +5,10 @@ import org.immutables.value.Value
 
 @Value.Immutable
 @HubSpotStyle
-interface CatIF : Animal {
+abstract class AbstractCat : Animal {
     override val noise: String
-        @Value.Default
+        //@Value.Default
         get() = "Meow"
 
-    val likesMilk: Boolean
+    abstract val likesMilk: Boolean
 }

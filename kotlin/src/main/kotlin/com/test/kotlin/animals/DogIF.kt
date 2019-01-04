@@ -6,8 +6,9 @@ import org.immutables.value.Value
 @Value.Immutable
 @HubSpotStyle
 interface DogIF : Animal {
+    @JvmDefault
     override val noise: String
-        @Value.Default
+        //@Value.Default
         get() = "Woof"
 
     val balls: List<Ball>
